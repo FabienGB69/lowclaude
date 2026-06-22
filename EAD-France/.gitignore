@@ -1,0 +1,8 @@
+.env
+node_modules/
+dist/
+data/raw_centers.json
+data/cleaned_centers.json
+data/enriched_centers.json
+data/scored_centers.json
+exports/
