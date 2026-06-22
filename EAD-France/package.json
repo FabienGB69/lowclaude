@@ -1,0 +1,32 @@
+{
+  "name": "ead-france",
+  "version": "0.1.0",
+  "description": "Pipeline de collecte et d'enrichissement des installateurs EAD agréés en France (~226 établissements)",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "scrape": "tsx scripts/scraper.ts",
+    "clean": "tsx scripts/cleaner.ts",
+    "enrich": "tsx scripts/enricher.ts",
+    "score": "tsx scripts/scorer.ts",
+    "export": "tsx scripts/exporter.ts",
+    "pipeline": "tsx scripts/pipeline.ts",
+    "pipeline:full": "SCRAPE_DRY_RUN=false tsx scripts/pipeline.ts --all"
+  },
+  "dependencies": {
+    "@mendable/firecrawl-js": "^1.0.0",
+    "csv-stringify": "^6.5.1",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.44.0",
+    "xlsx": "^0.18.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.15.0",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
